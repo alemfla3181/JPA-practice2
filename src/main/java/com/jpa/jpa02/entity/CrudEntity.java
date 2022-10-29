@@ -14,7 +14,7 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity(name="user")
-public class CRUDEntity {
+public class CrudEntity {
 
     @Id
     @Column(nullable = false, unique = true)
