@@ -30,13 +30,11 @@ class Jpa02ApplicationTests {
         String name = "이동욱";
         int age = 35;
 
-        String url = "http://localhost:" + port + "/insert?name=" + name +"?age=" +age;
+        String url = "http://localhost:" + port + "/insert?name=" + name +"&age=" +age;
 
         ResponseEntity<CrudEntity> responseEntity = restTemplate.getForEntity(url,CrudEntity.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-
-
 
     }
 
@@ -47,7 +45,6 @@ class Jpa02ApplicationTests {
         ResponseEntity<CrudEntity> responseEntity = restTemplate.getForEntity(url, CrudEntity.class);
 
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-
 
     }
 
